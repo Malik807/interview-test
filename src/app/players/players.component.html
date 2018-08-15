@@ -1,0 +1,41 @@
+<h3 style="text-align: center;">Player Lineup</h3>
+
+<!--Position Selection Buttons -->
+<div class="container">
+	<button (click)="onSelect(null)">All</button>
+	<button (click)="onSelect('Keeper')">Keeper</button>
+	<button (click)="onSelect('Defensive-Midfield')">Defensive Midfield</button>
+	<button (click)="onSelect('Left-Back')">Left-Back</button>
+	<button (click)="onSelect('Right-Back')">Right-Back</button>
+	<button (click)="onSelect('Central-Midfield')">Central Midfield</button>
+	<button (click)="onSelect('Left-Wing')">Left Wing</button>
+	<button (click)="onSelect('Attacking-Midfield')">Attacking Midfield</button>
+	<button (click)="onSelect('Right-Wing')">Right Wing</button>
+	<button (click)="onSelect('Centre-Back')">Centre-Back</button>
+	<button (click)="onSelect('Centre-Forward')">Centre-Forward</button>
+</div>
+
+
+<table id="playerTable">
+	<tr>
+	  <th>Name</th>
+		<th>Position</th>
+		<th>Jersey Number</th>
+		<th>Date Of Birth</th>
+		<th>Nationality</th>
+		<th>Contract Until</th>
+		<th>Market Value</th>
+	</tr>
+
+	<tbody *ngFor="let player of players">
+		<tr *ngIf="checkPosition(player)">
+		  <td>{{player.name}}</td>
+		  <td>{{player.position}}</td>
+		  <td>{{player.jerseyNumber}}</td>
+		  <td>{{player.dateOfBirth}}</td>
+		  <td>{{player.nationality}}</td>
+		  <td>{{player.contractUntil}}</td>
+		  <td>{{player.marketValue}}</td>
+		</tr>
+	</tbody>
+</table> 

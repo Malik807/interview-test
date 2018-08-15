@@ -1,14 +1,17 @@
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
+import { Player } from './player';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class InmemoryService {
 
   constructor() { }
 
-  getPlayers(): any[] {
-    return [
+  getPlayers(): Observable<Player[]> {
+    return of([
       {
         name: "Sven Ulreich",
         position: "Keeper",
@@ -27,7 +30,7 @@ export class InmemoryService {
         marketValue: null
       }, {
         name: "Javi Martínez",
-        position: "Defensive Midfield",
+        position: "Defensive-Midfield",
         jerseyNumber: 8,
         dateOfBirth: "1988-09-02",
         nationality: "Spain",
@@ -59,7 +62,7 @@ export class InmemoryService {
         marketValue: null
       }, {
         name: "Niklas Dorsch",
-        position: "Defensive Midfield",
+        position: "Defensive-Midfield",
         jerseyNumber: 30,
         dateOfBirth: "1998-01-15",
         nationality: "Germany",
@@ -67,7 +70,7 @@ export class InmemoryService {
         marketValue: null
       }, {
         name: "Arturo Vidal",
-        position: "Central Midfield",
+        position: "Central-Midfield",
         jerseyNumber: 23,
         dateOfBirth: "1987-05-22",
         nationality: "Chile",
@@ -75,7 +78,7 @@ export class InmemoryService {
         marketValue: null
       }, {
         name: "Franck Ribéry",
-        position: "Left Wing",
+        position: "Left-Wing",
         jerseyNumber: 7,
         dateOfBirth: "1983-04-07",
         nationality: "France",
@@ -83,7 +86,7 @@ export class InmemoryService {
         marketValue: null
       }, {
         name: "Fabian Benko",
-        position: "Attacking Midfield",
+        position: "Attacking-Midfield",
         jerseyNumber: 40,
         dateOfBirth: "1998-06-05",
         nationality: "Croatia",
@@ -91,7 +94,7 @@ export class InmemoryService {
         marketValue: null
       }, {
         name: "Kingsley Coman",
-        position: "Left Wing",
+        position: "Left-Wing",
         jerseyNumber: 29,
         dateOfBirth: "1996-06-13",
         nationality: "France",
@@ -99,7 +102,7 @@ export class InmemoryService {
         marketValue: null
       }, {
         name: "Arjen Robben",
-        position: "Right Wing",
+        position: "Right-Wing",
         jerseyNumber: 10,
         dateOfBirth: "1984-01-23",
         nationality: "Netherlands",
@@ -172,7 +175,7 @@ export class InmemoryService {
         marketValue: null
       }, {
         name: "Julian Weigl",
-        position: "Defensive Midfield",
+        position: "Defensive-Midfield",
         jerseyNumber: 33,
         dateOfBirth: "1995-09-08",
         nationality: "Germany",
@@ -180,7 +183,7 @@ export class InmemoryService {
         marketValue: null
       }, {
         name: "Gonzalo Castro",
-        position: "Central Midfield",
+        position: "Central-Midfield",
         jerseyNumber: 27,
         dateOfBirth: "1987-06-11",
         nationality: "Germany",
@@ -188,7 +191,7 @@ export class InmemoryService {
         marketValue: null
       }, {
         name: "Sebastian Rode",
-        position: "Central Midfield",
+        position: "Central-Midfield",
         jerseyNumber: 18,
         dateOfBirth: "1990-10-11",
         nationality: "Germany",
@@ -196,7 +199,7 @@ export class InmemoryService {
         marketValue: null
       }, {
         name: "Nuri Sahin",
-        position: "Defensive Midfield",
+        position: "Defensive-Midfield",
         jerseyNumber: 8,
         dateOfBirth: "1988-09-05",
         nationality: "Turkey",
@@ -204,7 +207,7 @@ export class InmemoryService {
         marketValue: null
       }, {
         name: "Mario Götze",
-        position: "Attacking Midfield",
+        position: "Attacking-Midfield",
         jerseyNumber: 10,
         dateOfBirth: "1992-06-03",
         nationality: "Germany",
@@ -212,7 +215,7 @@ export class InmemoryService {
         marketValue: null
       }, {
         name: "André Schürrle",
-        position: "Left Wing",
+        position: "Left-Wing",
         jerseyNumber: 21,
         dateOfBirth: "1990-11-06",
         nationality: "Germany",
@@ -220,7 +223,7 @@ export class InmemoryService {
         marketValue: null
       }, {
         name: "Christian Pulisic",
-        position: "Right Wing",
+        position: "Right-Wing",
         jerseyNumber: 22,
         dateOfBirth: "1998-09-18",
         nationality: "United States",
@@ -236,7 +239,7 @@ export class InmemoryService {
         marketValue: null
       }, {
         name: "Mahmoud Dahoud",
-        position: "Central Midfield",
+        position: "Central-Midfield",
         jerseyNumber: 19,
         dateOfBirth: "1996-01-01",
         nationality: "Germany",
@@ -252,7 +255,7 @@ export class InmemoryService {
         marketValue: null
       }, {
         name: "Maximilian Philipp",
-        position: "Left Wing",
+        position: "Left-Wing",
         jerseyNumber: 20,
         dateOfBirth: "1994-03-01",
         nationality: "Germany",
@@ -284,7 +287,7 @@ export class InmemoryService {
         marketValue: null
       }, {
         name: "Jadon Sancho",
-        position: "Left Wing",
+        position: "Left-Wing",
         jerseyNumber: 7,
         dateOfBirth: "2000-03-25",
         nationality: "England",
@@ -292,7 +295,7 @@ export class InmemoryService {
         marketValue: null
       }, {
         name: "Sergio Gómez",
-        position: "Left Wing",
+        position: "Left-Wing",
         jerseyNumber: 34,
         dateOfBirth: "2000-09-04",
         nationality: "Spain",
@@ -300,13 +303,13 @@ export class InmemoryService {
         marketValue: null
       }, {
         name: "Andriy Yarmolenko",
-        position: "Right Wing",
+        position: "Right-Wing",
         jerseyNumber: 9,
         dateOfBirth: "1989-10-23",
         nationality: "Ukraine",
         contractUntil: "2021-06-30",
         marketValue: null
       }
-    ]
+    ]);
   }
 }

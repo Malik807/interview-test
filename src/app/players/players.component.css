@@ -1,0 +1,9 @@
+/*-------------- Player Component CSS ---------------------*/
+#playerTable {
+	width: 100%;
+	margin: 10px 20px;
+}
+
+.container {
+	text-align: center;
+}
